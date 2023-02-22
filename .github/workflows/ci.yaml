@@ -12,6 +12,7 @@ jobs:
         with:
           node-version: "12.x"
       - run: npm install --save-dev --save-exact prettier
+      - run: npm run format:write
       - run: npm run format:check
       - run: npm test -- --coverage
         env: 
