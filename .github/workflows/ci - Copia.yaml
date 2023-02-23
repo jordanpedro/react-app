@@ -9,6 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: CACHE node_modules
+        uses: actions/cache@v1
+        with:
+          path: ~/.npm    
+          key: ${{runner.os}}-node-${{hashfiles('**/package-lock.json')}}   
+          restore-key: |
+            ${{runner.os}}-node-
       - name: Use NODE 
         uses: actions/setup-node@v1
         with:
@@ -19,6 +26,3 @@ jobs:
       #- run: npm test --coverage
       #  env: 
       #    CI: true
-      - name: build project
-        if: github.event_name == 'push'
-        run: npm run build
