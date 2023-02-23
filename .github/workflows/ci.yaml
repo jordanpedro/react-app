@@ -23,6 +23,7 @@ jobs:
       - run: npm install --save-dev --save-exact prettier
       - run: npm run format:write
       - run: npm run format:check
+      - run: ls      
       #- run: npm test --coverage
       #  env: 
       #    CI: true
