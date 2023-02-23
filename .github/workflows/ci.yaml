@@ -28,8 +28,8 @@ jobs:
       #  env: 
       #    CI: true
       - name: build project
-        if: github.event_name == 'push'
-        run: npm run build
+        #if: github.event_name == 'push'
+        run: npm run ./src/build
       - name: UPLOAD BUILD FOLDER
         uses: actions/upload-artifact@v1
         with:
