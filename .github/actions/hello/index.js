@@ -2,7 +2,7 @@ const core = require('@actions/core');
 const github = require('@actions/github');
 const name = core.getInput('who-to-greet')
 console.log(`Hellow ${name}`)
-try{
+try{ 
 const time = new Date();
 core.setOutput("time", time.toTimeString());
 }

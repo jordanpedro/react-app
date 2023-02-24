@@ -1169,8 +1169,7 @@ const core = __webpack_require__(470);
 const github = __webpack_require__(469);
 const name = core.getInput('who-to-greet')
 console.log(`Hellow ${name}`)
-try{
-throw(new Error("MEnsagem de erro"));
+try{ 
 const time = new Date();
 core.setOutput("time", time.toTimeString());
 }
