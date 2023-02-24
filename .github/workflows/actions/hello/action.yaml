@@ -1,0 +1,14 @@
+name: Hellow WOrld action
+author: Jordan  
+description: Descricao da minha action 
+inputs:
+  who-to-greet:
+    description: 'who to greet'
+    required: true
+    default: Jordan
+outputs:
+  time:
+    description: Descricao da saída
+runs:
+  using: 'node12'
+  main: 'index.js'
