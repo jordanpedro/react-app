@@ -16,15 +16,14 @@ jobs:
       #- run: npm test --coverage
       #  env: 
       #    CI: true
-      - name: build project
-        #if: github.event_name == 'push'
-        run: npm run build
-      - name: UPLOAD BUILD FOLDER
-        uses: actions/upload-artifact@v1
+  testing-action:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+      - uses: ./.github/actions/hello
+        id: Hello
         with:
-          path: build
-          name: build      
-      - name: DOWNLOAD ARTIFACT
-        uses: actions/download-artifact@v1
-       
+          who-to-greet: "World"
+      - run: |
+          echo "Time: ${{steps.hello.outputs.time}}"
 
