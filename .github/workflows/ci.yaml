@@ -19,6 +19,8 @@ jobs:
   testing-action:
     runs-on: ubuntu-18.04
     steps:
+      - run: npm i @actions/core
+      - run: npm i @actions/github      
       - uses: actions/checkout@v2
       - uses: ./.github/actions/hello
         id: Hello
