@@ -9,4 +9,4 @@ core.setOutput("time", time.toTimeString());
 }
 catch(error){
     core.setFailed(error.message)
-}
+} 
