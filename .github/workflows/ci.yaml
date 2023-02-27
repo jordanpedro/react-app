@@ -27,4 +27,14 @@ jobs:
       - run: |
           echo "Time: ${{steps.hello.outputs.time}}"
       - run: echo  $EXPORTADA
+      - uses: ./.github/actions/issue
+        id: issue
+        with:
+          token: ${{secrets.GITHUB_TOKEN}}
+          title: Title
+          body: Body
+          assignees: |
+            jordanpedro
+      - run: |
+          echo "${{steps.issue.outputs.issue}}"
 
