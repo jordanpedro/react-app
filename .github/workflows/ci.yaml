@@ -20,7 +20,7 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: ls
+      - run: ls -a
       - run: cat ./.github/actions/issues/dist/index.js
 
       - uses: ./.github/actions/issues
