@@ -21,8 +21,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: ls ./.github/actions/issues/dist -a
-      - run: cat ./.github/actions/issues/dist/index.jsr
-
       - uses: ./.github/actions/issues
         id: issue
         with:
