@@ -20,8 +20,9 @@ jobs:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@v2
-      - run: cat ./.github/actions/issues/dist/index.js
       - run: ls
+      - run: cat ./.github/actions/issues/dist/index.js
+
       - uses: ./.github/actions/issues
         id: issue
         with:
