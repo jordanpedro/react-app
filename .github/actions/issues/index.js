@@ -8,9 +8,9 @@ try{
     const title = core.getInput('title')
     const body = core.getInput('body')
     const assignees = core.getInput('assignees')
-    const oktokit = new github.GitHub(token)
+    const octokit = new github.GitHub(token)
 
-    const response =  await  octokit.rest.issues.create({
+    const response =  await octokit.rest.issues.create({
         ...github.context.repo,        
         title,
         body,
