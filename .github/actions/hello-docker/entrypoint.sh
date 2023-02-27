@@ -7,4 +7,4 @@ echo "hello $1"
 
 time=$(date)
 echo "::set-output name=time::$time"
-echo '::set-env name=HELLO:hello'
+echo '::set-env name=EXPORTADA:hello'
