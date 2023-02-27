@@ -29,6 +29,10 @@ jobs:
           body: Body
           assignees: |
             jordanpedro      
+      - name: listar files
+        run: |
+          ls -a
+          chmod +x ./.github/actions/hello-docker/entrypoint.sh     
       - uses: ./.github/actions/hello-docker
         id: Hello
         with:
