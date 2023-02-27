@@ -29,10 +29,10 @@ jobs:
           body: Body
           assignees: |
             jordanpedro      
-      - uses: ./.github/actions/hello
+      - uses: ./.github/actions/hello-docker
         id: Hello
         with:
-          who-to-greet: "World"
+          who-to-greet: "EU"
       - run: |
           echo "Time: ${{steps.hello.outputs.time}}"
       - run: echo  $EXPORTADA
